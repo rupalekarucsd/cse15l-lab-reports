@@ -1,4 +1,4 @@
-https://rupalekarucsd.github.io/cse15l-lab-reports/index.html
+[Index File](https://rupalekarucsd.github.io/cse15l-lab-reports/index.html)
 
 ........
 
