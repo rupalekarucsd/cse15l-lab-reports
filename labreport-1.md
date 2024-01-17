@@ -2,7 +2,7 @@
 
 ## Rohan Upalekar
 
-![Image](https://github.com/rupalekarucsd/cse15l-lab-reports/blob/main/cd-ss.png)
+![Image](cd-ss.png)
 
 The cd command with no arguments resets the directory to the  home (main) directory. Regardless of the working directory (/home/lecture1 or /home/lecture1/messages) it'll always reset it to /home. We tried it with /home/lecture1/messages as the working directory. The output isn't an error.
 
@@ -18,7 +18,7 @@ The cd command with a path to a file as an argument throws an error. Regardless 
 
 ---
 
-![Image](https://github.com/rupalekarucsd/cse15l-lab-reports/blob/main/ls-ss.png)
+![Image](ls-ss.png)
 
 The ls command with no arguments lists off the contents of the directory it's currently in. For example, in our first examples it lists lecture1 as it's in the /home directory. That said after we cd into lecture1 and run ls, it'll return all the contents of the /home/lecture1 directory as shown in the image. This doesn't return an error.
 
@@ -34,7 +34,7 @@ The ls command with a path to a file as an argument works very similarly to the 
 
 ---
 
-![Image](https://github.com/rupalekarucsd/cse15l-lab-reports/blob/main/cat-ss.png)
+![Image](cat-ss.png)
 
 The cat command with no arguments does something interesting. It seems that the command reads from the terminal, thus simply returning whatever command you put into it. The edstem discussion suggests that this may or may not be an error, however to resolve this you have to press `Ctrl/Cmd + c`. Regardless of your working directory, this command will lead to this, and so far doesn't seem to have a viable use for us. 
 
