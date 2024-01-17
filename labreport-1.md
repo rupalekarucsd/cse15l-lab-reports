@@ -29,3 +29,7 @@ The ls command with a path to directory will list the contents of that directory
 Thus throwing an error proving that the command only has scope one level down the chain. Running ls messages in /home/lecture1 will work as intended.
 
 The ls command with a path to a file as an argument works very similarly to the ls command with a path to a directory as the argument. The same error message will be thrown if the argument doesn't contain a file in that same working directory. As we can see ls hi.txt and en-us.txt list their respective file names, but only in the /home/lecture1/messages directory. 
+
+![Image](https://github.com/rupalekarucsd/cse15l-lab-reports/blob/main/cat-ss.png)
+
+The cat command with no arguments does something interesting. It seems that the command reads from the terminal, thus simply returning whatever command you put into it. The edstem discussion suggests that this may or may not be an error, however to resolve this you have to press `Ctrl/Cmd + c`. Regardless of your working directory, this command will lead to this, and so far doesn't seem to have a viable use for us. 
