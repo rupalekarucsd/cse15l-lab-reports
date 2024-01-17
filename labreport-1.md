@@ -18,3 +18,4 @@ The cd command with a path to a file as an argument throws an error. Regardless 
 
 ![Image](https://github.com/rupalekarucsd/cse15l-lab-reports/blob/main/ls-ss.png)
 
+
