@@ -11,3 +11,7 @@ The cd command with a path to a directory as an argument will set that directory
 `[user@sahara ~]$ cd messages`
 
 `bash: cd: messages: No such file or directory`
+
+When running command, we are always in a directory that is one out of the other (ie cd messages is ran in /home/lecture1 and cd lecture1 is ran in /home). 
+
+The cd command with a path to a file as an argument throws an error. Regardless of what working directory you're in, you cannot cd into a file. Cd stands for change directory  
