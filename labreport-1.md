@@ -18,4 +18,12 @@ The cd command with a path to a file as an argument throws an error. Regardless 
 
 ![Image](https://github.com/rupalekarucsd/cse15l-lab-reports/blob/main/ls-ss.png)
 
+The ls command with no arguments lists off the contents of the directory it's currently in. For example, in our first examples it lists lecture1 as it's in the /home directory. That said after we cd into lecture1 and run ls, it'll return all the contents of the /home/lecture1 directory. This doesn't return an error.
 
+The ls command with a path to directory will list the contents of that directory provided it's only one directory down the chain. This means provided you're in the home directory, you can run the command ls lecture1. That said if you're in the home directory and run: 
+
+`[user@sahara ~]$ ls messages`
+
+`ls: cannot access 'messages': No such file or directory`
+
+Thus throwing an error proving that the command only has scope one level down the chain. Running ls messages in /home/lecture1 will work as intended.
