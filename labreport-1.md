@@ -8,4 +8,6 @@ The cd command with no arguments resets the directory to the  home (main) direct
 
 The cd command with a path to a directory as an argument will set that directory as your current working directory. Bear in mind, you can only go one level up ie, cd lecture1, and then cd messages. If you try to directly go cd messages it'll say:
 
+`[user@sahara ~]$ cd messages`
 
+`bash: cd: messages: No such file or directory`
