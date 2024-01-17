@@ -37,3 +37,17 @@ The ls command with a path to a file as an argument works very similarly to the 
 ![Image](https://github.com/rupalekarucsd/cse15l-lab-reports/blob/main/cat-ss.png)
 
 The cat command with no arguments does something interesting. It seems that the command reads from the terminal, thus simply returning whatever command you put into it. The edstem discussion suggests that this may or may not be an error, however to resolve this you have to press `Ctrl/Cmd + c`. Regardless of your working directory, this command will lead to this, and so far doesn't seem to have a viable use for us. 
+
+The cat command with a path to a directory as an argument will lead to an error. Although it could seem similar to ls, ls should be the go to command for trying to display the contents of a directory. As you can see, running `cat messages` in the /home/lecture1 directory leads to the error `cat: messages: Is a directory`. This is because the cat command's job is to list the contents of a file, and the command isn't built to list the contents of a directory.
+
+The cat command with a path to a file as an argument is the correct way to use the command. Provided you are in the correct working directory, running cat and then the filename will print the contents of the file. As we can see, we ran cat Hello.java in the /home/lecture1 directory, and it printed the contents of the Hello.java file. We can also have multiple arguments in the cat command, provided the files are in the same directory. After cd-ing into the messages directory, running cat with multiple commands yielded:
+
+`cat hi.txt en-us.txt es-mx.txt`
+
+`नमसत दनया`
+
+`Hello World!`
+
+`¡Hola Mundo!` 
+
+The respective contents of each file all together.
