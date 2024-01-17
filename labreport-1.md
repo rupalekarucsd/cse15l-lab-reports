@@ -16,6 +16,8 @@ When running command, we are always in a directory that is one out of the other 
 
 The cd command with a path to a file as an argument throws an error. Regardless of what working directory you're in, you cannot cd into a file. Cd stands for change directory not file. To go back to the original home directory cd works out, but cd.. will take you out one level.
 
+---
+
 ![Image](https://github.com/rupalekarucsd/cse15l-lab-reports/blob/main/ls-ss.png)
 
 The ls command with no arguments lists off the contents of the directory it's currently in. For example, in our first examples it lists lecture1 as it's in the /home directory. That said after we cd into lecture1 and run ls, it'll return all the contents of the /home/lecture1 directory. This doesn't return an error.
@@ -29,6 +31,8 @@ The ls command with a path to directory will list the contents of that directory
 Thus throwing an error proving that the command only has scope one level down the chain. Running ls messages in /home/lecture1 will work as intended.
 
 The ls command with a path to a file as an argument works very similarly to the ls command with a path to a directory as the argument. The same error message will be thrown if the argument doesn't contain a file in that same working directory. As we can see ls hi.txt and en-us.txt list their respective file names, but only in the /home/lecture1/messages directory. 
+
+---
 
 ![Image](https://github.com/rupalekarucsd/cse15l-lab-reports/blob/main/cat-ss.png)
 
