@@ -14,7 +14,7 @@ The cd command with a path to a directory as an argument will set that directory
 
 When running command, we are always in a directory that is one out of the other (ie cd messages is ran in /home/lecture1 and cd lecture1 is ran in /home). To bypass the one directory rule, we can run cd lecture1/messages to directly change into the messages directory. 
 
-The cd command with a path to a file as an argument throws an error. Regardless of what working directory you're in, you cannot cd into a file. Cd stands for change directory not file. To go back to the original home directory cd works out, but cd.. will take you out one level.
+The cd command with a path to a file as an argument throws an error. Regardless of what working directory you're in, you cannot cd into a file. Cd stands for change directory not file. To go back to the original home directory cd works out, but `cd..` will take you up one level if that's what you want instead.
 
 ---
 
