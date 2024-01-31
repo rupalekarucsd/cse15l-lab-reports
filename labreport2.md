@@ -1,5 +1,5 @@
 
-# Lab Report 1
+# Lab Report 2
 
 ## Rohan Upalekar
 
@@ -28,4 +28,19 @@ he methods in my code that are called are handleRequest(URI url). The relevant a
 ## Screenshot of ieng login wo password
 
 ![Image](iengsshwopassword.png)
+
+
+---
+
+
+## Key path (couldn't find absolute path for Apple notes on macbook) 
+
+
+![Image](keypathieng.png)
+
  
+---
+
+## Something I learned
+
+During the lab in week three I learned about ssh keys to login and some of their functions such as mkdir. It's a way to make a new directory all within the command line. 
