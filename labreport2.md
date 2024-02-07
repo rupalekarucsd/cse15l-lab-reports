@@ -33,12 +33,18 @@ The methods in my code that are called are handleRequest(URI url). The relevant 
 ---
 
 
-## Key path (couldn't find absolute path for Apple notes on macbook) 
-
-
-![Image](keypathieng.png)
+## Public Key path 
+`/home/linux/ieng6/oce/5k/rupalekar/.ssh/authorized_keys`
+![Image](iengpublickey.png)
 
  
+---
+
+## Private Key path
+
+`/Users/rohanupalekar/.ssh/id_rsa`
+![Image](iengprivkey.png)
+
 ---
 
 ## Something I learned
