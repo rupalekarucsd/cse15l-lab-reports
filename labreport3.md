@@ -22,19 +22,21 @@ This test would yield true even thought the program worked improperly as the met
 
 To have fixed the code we changed the original method:
 
+
+```
 static int[] reversed(int[] arr) {
 
     int[] newArray = new int[arr.length];
-    
+
     for(int i = 0; i < arr.length; i += 1) {
-    
+
       arr[i] = newArray[arr.length - i - 1];
-      
+
     }
-    
+
     return arr;
-    
-  } 
 
+  }
 
+```
 
