@@ -46,14 +46,14 @@ static int[] reversed(int[] arr) {
 ![Image](grep11.png)
 ![Image](grep12.png)
 
-
+## grep -c
 ![Image](grep21.png)
 ![Image](grep22.png)
 
-
+## grep -o
 ![Image](grep31.png)
 
-
+### grep -i
 ![Image](grep41.png)
 ![Image](grep41.png)
 
