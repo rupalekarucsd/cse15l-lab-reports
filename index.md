@@ -1,55 +1,59 @@
-
-# Lab Report 2
-
+# Lab Report 3
 ## Rohan Upalekar
 
-![Image](Chatservercode.png)
-
-## Screenshot of addmessage 1
+## Part 1- Bugs
 
 
-![Image](addmessage1.png)
+![Image](reverseInPlaceBug.png)
+
+The bug made the `reverseInPlace()` method return half the elements reversed, and the second half of elements the same. This meant that for example array `[1,2,3`] reversed would return `[3,2,3]`. 
+
+An input that wouldn't induce failure would be for example: 
 
 
-The methods in my code that are called are `handleRequest(URI url)`. The relevant arguments are the `add message` commands in the url: `/add-message?s=Hello&user=jpolitz` etc. These are stored in the `String input` variable. The variables change as new commands get added. `String input` starts as an empty string (""). As more `add` commands are typed, it gets stored in that variable, thus displaying the messages, and future messages when they are added `(jpolitz + ": " + Hello + "\n")`. 
+`assertArrayEquals(new int[]{1,2,1}, {1,2,1};` 
 
----
-
-
-## Screen shot of addmessage 2
+This test would yield true even thought the program worked improperly as the method works for palindromes. Another example of an error inducing test would be array `[1,2]`. In turn the final reversedElements would return `[2,2]`. I was only able to take one screenshot in lab with an error inducing output, and my IDE won't allow any further testing even after 3-4 different clones into different directories etc. Please excuse any missing images, I will address the prompt otherwise. 
 
 
-![Image](addmessage2.png)
 
-The methods in my code that are called are `handleRequest(URI url)`. The relevant arguments are the `add message` commands in the url: `/add-message?s=How are you&user=rupalekar` etc. This argument is stored in the `String input` variable which already contains the previous command. The current value of `input` has changed to: `(jpolitz + ": " + Hello + "\n" + rupalekar + ": " + How are you + "\n")`. 
+## The fixed code is as shown below.
+![Image](reversedArrUpdated.png)
 
----
-
-## Screenshot of ieng login wo password
-
-![Image](iengsshwopassword.png)
+To have fixed the code we changed the original method, shown below, by changing arr[i] to newArray[i] within the for loop. This avoids alteration of the original array passed in, which was causing the bug initially:
 
 
----
+```
+static int[] reversed(int[] arr) {
+
+    int[] newArray = new int[arr.length];
+
+    for(int i = 0; i < arr.length; i += 1) {
+
+      arr[i] = newArray[arr.length - i - 1];
+
+    }
+
+    return arr;
+
+  }
+
+```
 
 
-## Public Key path 
-`/home/linux/ieng6/oce/5k/rupalekar/.ssh/authorized_keys`
+## Part 2- Researching Commands (grep)
+## grep -color
+![Image](grep11.png)
+![Image](grep12.png)
 
+## grep -c
+![Image](grep21.png)
+![Image](grep222.png)
 
-![Image](iengpublickey.png)
+## grep -o
+![Image](grep31.png)
 
- 
----
+### grep -i
+![Image](grep41.png)
+![Image](grep41.png)
 
-## Private Key path
-`/Users/rohanupalekar/.ssh/id_rsa`
-
-
-![Image](iengprivkey.png)
-
----
-
-## Something I learned
-
-During the lab in week three I learned about ssh keys to login and some of their functions such as mkdir. It's a way to make a new directory all within the command line. 
