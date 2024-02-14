@@ -6,15 +6,15 @@
 
 ![Image](reverseInPlaceBug.png)
 
-The bug made the `reverseInPlace()` method return half the elements reversed, and the second half of elements the same. This meant that for example array `[1,2,3`] reversed would return `[3,2,3]`.
-
+The bug made the `reverseInPlace()` method return half the elements reversed, and the second half of elements the same. This meant that for example array `[1,2,3`] reversed would return `[3,2,3]`. 
 
 An input that wouldn't induce failure would be for example: 
 
 
 `assertArrayEquals(new int[]{1,2,1}, {1,2,1};` 
 
-This test would yield true even thought the program worked improperly as the method works for palindromes. 
+This test would yield true even thought the program worked improperly as the method works for palindromes. Another example of an error inducing test would be array `[1,2]`. In turn the final reversedElements would return `[2,2]`. I was only able to take one screenshot in lab with an error inducing output, and my IDE won't allow any further testing even after 3-4 different clones into different directories etc. 
+
 
 
 ## The fixed code is as shown below.
