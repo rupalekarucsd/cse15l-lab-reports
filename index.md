@@ -10,9 +10,15 @@ The bug made the `reverseInPlace()` method return half the elements reversed, an
 
 An input that wouldn't induce failure would be for example: 
 
-
-`assertArrayEquals(new int[]{1,2,1}, {1,2,1};` 
-
+```
+@Test
+public void testPalindrome(){
+int[] input2 = {1,2,1};
+ArrayExamples.reverseInPlace(input2)
+//Yields {1,2,1}
+assertArrayEquals(new int[]{1,2,1}, input2};
+}
+```
 This test would yield true even thought the program worked improperly as the method works for palindromes. Another example of an error inducing test would be array `[1,2]`. In turn the final reversedElements would return `[2,2]`. I was only able to take one screenshot in lab with an error inducing output, and my IDE won't allow any further testing even after 3-4 different clones into different directories etc. Please excuse any missing images, I will address the prompt otherwise. 
 
 
