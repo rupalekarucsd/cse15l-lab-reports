@@ -18,8 +18,26 @@ This test would yield true even thought the program worked improperly as the met
 
 
 ## The fixed code is as shown below.
-![Image](reversedArrUpdated.png)
 
+
+```
+//Returns a *new* array with all the elements of the input array in reversed order
+static int[] reversed(int[] arr) {
+
+    int[] newArray = new int[arr.length];
+
+    for(int i = 0; i < arr.length; i += 1) {
+
+        //newArray[] is updated instead of arr[]
+        newArray[i] = arr[arr.length - i - 1];
+
+    }
+    //returns the newArray[], not existing param arr[]
+    return newArray;
+
+  }
+
+```
 To have fixed the code we changed the original method, shown below, by changing arr[i] to newArray[i] within the for loop. This avoids alteration of the original array passed in, which was causing the bug initially:
 
 
@@ -68,6 +86,6 @@ Prints the phrase if it is contained in the text file. This is useful to see whe
 
 
 ![Image](grep41.png)
-![Image](grep41.png)
+![Image](grep42.png)
 
-Prints all occurrences of the given input while ignoring it's case. This is the key idea of the `grep -i` command. It will subsequently print all occurrences of the input in the file. In the first example of `-i "Ros"` most occurrences of Ros and Rosencrantz are upper case, however in the example of `-i "My Lord"` there are plenty of lowercase mentions of the input, and the utility of the command is highlighted. 
+Prints all occurrences of the given input while ignoring it's case. This is the key idea of the `grep -i` command. It will subsequently print all occurrences of the input in the file. In the first example of `-i Ros` most occurrences of Ros and Rosencrantz are upper case, however in the example of `-i "My Lord"` there are plenty of lowercase mentions of the input, and the utility of the command is highlighted. 
