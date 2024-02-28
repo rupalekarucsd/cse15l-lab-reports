@@ -3,26 +3,32 @@
 
 ## Part 4- Logging into Ieng
 
-
+Logged in via `ssh rupalekar@ieng6.ucsd.edu` and then pressed `<enter>` key to login.
 ![Image](Step4.png)
+
 
 ## Part 5- Clone your fork of the repository from your Github account (using the SSH URL)
 
-
+Used the command `git clone https://github.com/rupalekarucsd/lab7.git` to clone the forked repo into my ieng directory and then pressed `<enter>`. 
 ![Image](Step5.png)
 
 ## Part 6- Running the tests (Fail)
 
-
+Ran the tests with `javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java` to compile the files `<enter>`. Repeated with `java -cp .:lib/hamcrest-
+core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ListExamplesTests` to run the tests for ListExamplesTests.java (test file for `ListExamples.java`). As we can see, the tests have failed, and we need to fix them. 
 ![Image](Step6.png)
 
 ## Part 7- Editing the Code
 
-
-![Image](Step7.png)
+Opened up the file ListExamples.java in vim with command `vim ListExamples.java <enter>`
+This opened up the file as an editor. 
+To get to Index1
+Had to press `<down key>` 20 times and `<left key>` 6 times to get to the desired character to change. 
 ![Image](Step7-2.png)
+Then had to press `<x>` to delete and `<i>` to insert the following key `2 <enter>` to replace index1 with index2. 
 ![Image](Step7-3.png)
-![Image](Step7.png)
+To exit Vim and save the edit, had to press `<:wq>`. This saves the file with the new edits, and exits the Vim interface back to our main command line. 
+![Image](Step7-4.png)
 
 ## Part 8- Running the edited tests (Pass)
 
