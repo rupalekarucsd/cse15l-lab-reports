@@ -9,29 +9,27 @@ Logged in via `ssh rupalekar@ieng6.ucsd.edu` and then pressed `<enter>` key to l
 
 ## Part 5- Clone your fork of the repository from your Github account (using the SSH URL)
 
-Used the command `git clone https://github.com/rupalekarucsd/lab7.git` to clone the forked repo into my ieng directory and then pressed `<enter>`. 
+Copied the link  `git clone https://github.com/rupalekarucsd/lab7.git` from Github and used the command `<Ctrl> + <V>` to clone the forked repo into my ieng directory and then pressed `<enter>`. 
 ![Image](Step5.png)
 
 ## Part 6- Running the tests (Fail)
-
-Ran the tests with `javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java` to compile the files `<enter>`. Repeated with `java -cp .:lib/hamcrest-
-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ListExamplesTests` to run the tests for ListExamplesTests.java (test file for `ListExamples.java`). As we can see, the tests have failed, and we need to fix them. 
+Then ran the command `ls` to see the different folders in the server. I then used the command `cd lab7` to change the directory to the lab7 folder. Subsequently I ran the tests with `<Ctrl> + <V>` to input `javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java` to compile the files `<enter>`. Repeated with  `<Ctrl> + <V>` and `java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ListExamplesTests` to run the tests for ListExamplesTests.java (test file for `ListExamples.java`). Alternatively we could've used command `bash test.sh`. As we can see, the tests have failed, and we need to fix them. 
 ![Image](Step6.png)
 
 ## Part 7- Editing the Code
 
 Opened up the file ListExamples.java in vim with command `vim ListExamples.java <enter>`
 This opened up the file as an editor. 
-To get to Index1
-Had to press `<down key>` 20 times and `<left key>` 6 times to get to the desired character to change. 
+To get to `Index1`
+Had to press `<down key>` `20` times and `<left key>` `6` times to get to the desired character to change. 
 ![Image](Step7-2.png)
 
 
-Then had to press `<x>` to delete and `<i>` to insert the following key `2 <enter>` to replace index1 with index2. 
+Then had to press `<x>` to delete and `<i>` to insert the following key `2` to replace `index1` with `index2`. 
 ![Image](Step7-3.png)
 
 
-To exit Vim and save the edit, had to press `<:wq>`. This saves the file with the new edits, and exits the Vim interface back to our main command line. 
+After exiting insert mode by pressing `<i>` again, to exit Vim and save the edit, had to press `<:wq>` and `<enter>`. This saves the file with the new edits, and exits the Vim interface back to our main command line. 
 ![Image](Step7-4.png)
 
 ## Part 8- Running the edited tests (Pass)
