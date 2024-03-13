@@ -1,97 +1,46 @@
 # Lab Report 4
-## Rohan Upalekar A17545060
+## Rohan Upalekar
 
-## Part 1- Bugs
+## Part 4- Logging into Ieng
 
-
-![Image](reverseInPlaceBug.png)
-
-The bug made the `reverseInPlace()` method return half the elements reversed, and the second half of elements the same. This meant that for example array `[1,2,3`] reversed would return `[3,2,3]`. 
-
-An input that wouldn't induce failure would be for example: 
-
-```
-@Test
-public void testPalindrome(){
-int[] input2 = {1,2,1};
-ArrayExamples.reverseInPlace(input2)
-//Yields {1,2,1}
-assertArrayEquals(new int[]{1,2,1}, input2};
-}
-```
-This test would yield true even thought the program worked improperly as the method works for palindromes. Another example of an error inducing test would be array `[1,2]`. In turn the final reversedElements would return `[2,2]`. I was only able to take one screenshot in lab with an error inducing output, and my IDE won't allow any further testing even after 3-4 different clones into different directories etc. Please excuse any missing images, I will address the prompt otherwise. 
+Logged in via `ssh rupalekar@ieng6.ucsd.edu` and then pressed `<enter>` key to login.
+![Image](Step4.png)
 
 
+## Part 5- Clone your fork of the repository from your Github account (using the SSH URL)
 
-## The fixed code is as shown below.
+Copied the link  `git clone https://github.com/rupalekarucsd/lab7.git` from Github and used the command `<Ctrl> + <V>` to clone the forked repo into my ieng directory and then pressed `<enter>`. 
+![Image](Step5.png)
 
+## Part 6- Running the tests (Fail)
+Then ran the command `ls` to see the different folders in the server. I then used the command `cd lab7` to change the directory to the lab7 folder. Subsequently I ran the tests with `<Ctrl> + <V>` to input `javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java` to compile the files `<enter>`. Repeated with  `<Ctrl> + <V>` and `java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ListExamplesTests` to run the tests for ListExamplesTests.java (test file for `ListExamples.java`). Alternatively we could've used command `bash test.sh`. As we can see, the tests have failed, and we need to fix them. 
+![Image](Step6.png)
 
-```
-//Returns a *new* array with all the elements of the input array in reversed order
-static int[] reversed(int[] arr) {
+## Part 7- Editing the Code
 
-    int[] newArray = new int[arr.length];
-
-    for(int i = 0; i < arr.length; i += 1) {
-
-        //newArray[] is updated instead of arr[]
-        newArray[i] = arr[arr.length - i - 1];
-
-    }
-    //returns the newArray[], not existing param arr[]
-    return newArray;
-
-  }
-
-```
-To have fixed the code we changed the original method, shown below, by changing arr[i] to newArray[i] within the for loop. This avoids alteration of the original array passed in, which was causing the bug initially:
+Opened up the file ListExamples.java in vim with command `vim ListExamples.java <enter>`
+This opened up the file as an editor. 
+To get to `Index1`
+Had to press `<down key>` `20` times and `<left key>` `6` times to get to the desired character to change. 
+![Image](Step7-2.png)
 
 
-```
-static int[] reversed(int[] arr) {
-
-    int[] newArray = new int[arr.length];
-
-    for(int i = 0; i < arr.length; i += 1) {
-
-      arr[i] = newArray[arr.length - i - 1];
-
-    }
-
-    return arr;
-
-  }
-
-```
+Then had to press `<x>` to delete and `<i>` to insert the following key `2` to replace `index1` with `index2`. 
+![Image](Step7-3.png)
 
 
-## Part 2- Researching Commands (grep)
-## grep -color
+After exiting insert mode by pressing `<i>` again, to exit Vim and save the edit, had to press `<:wq>` and `<enter>`. This saves the file with the new edits, and exits the Vim interface back to our main command line. 
+![Image](Step7-4.png)
 
-![Image](grep11.png)
-![Image](grep12.png)
+## Part 8- Running the edited tests (Pass)
 
+Used `bash test.sh <enter>` a shortcut to run the updated test files. As we can see, the update allowed them to pass. 
+![Image](Step8.png)
 
-Identifies the text input provided and returns the word and line with the word highlighted in that color. Makes it easy to identify a specific word in a large file by color. In these cases we highlighted the foobalbar player to show him in a list of baseball players. In the whitepaper of a crypto token before, it is easy to highlight the code that contains the function `mapping`. 
-## grep -c
+## Part 9- Committing code to Github
 
-![Image](grep21.png)
-![Image](grep222.png)
+To initialize the git repo, I used command `git init <enter>`. Then I ran `git add ListExamples.java <enter>` to add the modified file to the pipeline. Then I ran `git commit -m "V2" <enter>` to commit the changes as well as a brief message to display that this was an alternate updated version. Finally pushed the changes via `git push origin main`.
+![Image](Step9.png)
 
-
-Identifies the count of the input provided and returns the count of the word or phrase in the file. The examples below are rather self explanatory. This results in an easy method to identify how many times a phrase/word is repeated. 
-
-
-## grep -o
-
-![Image](grep31.png)
-
-Prints the phrase if it is contained in the text file. This is useful to see whether the input provided exists or not. In the examples below it is shown that a file with the input provided of `wargare..` returns itself as it is present. That said, if the input isn't present in the text file, i.e `hi`, then nothing is returned relaying its absence in the file. 
-
-### grep -i
-
-
-![Image](grep41.png)
-![Image](grep42.png)
-
-Prints all occurrences of the given input while ignoring it's case. This is the key idea of the `grep -i` command. It will subsequently print all occurrences of the input in the file. In the first example of `-i Ros` most occurrences of Ros and Rosencrantz are upper case, however in the example of `-i "My Lord"` there are plenty of lowercase mentions of the input, and the utility of the command is highlighted. 
+As we can see the code is updated. 
+![Image](ConfirmCommit.png)
